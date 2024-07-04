@@ -1,1 +1,3 @@
 Test
+{{ template "hourly-table" $.TodayWeather.HourlyWeathers }}
+{{ formatTime .UpdatedAt }}
