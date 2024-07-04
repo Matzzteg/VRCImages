@@ -10,6 +10,6 @@
 
 </div>
 
-{{template "hourly-table" $todayWeather.HourlyWeathers}}
+{{ template "daily-table" .Weathers }}
 
 {{- end }}
