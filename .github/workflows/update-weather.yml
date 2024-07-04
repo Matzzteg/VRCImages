@@ -14,7 +14,7 @@ jobs:
             - name: Generate README
               uses: huantt/weather-forecast@v1.0.6
               with:
-                city: Berlin
+                city: Eberswalde
                 days: 0
                 weather-api-key: ${{ secrets.WEATHER_API_KEY }}
                 template-file: 'README.md.template'
