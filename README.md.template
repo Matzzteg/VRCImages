@@ -1,4 +1,4 @@
-##Todays Weather:
+##Today's Weather
 
 {{ $todayWeather.Condition }}
 
