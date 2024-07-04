@@ -1,11 +1,3 @@
-## Today's Weather
-<div align="center">
-{{ with $todayWeather := index .Weathers 0 }}
-
-`{{ $todayWeather.City }}, {{$todayWeather.Country }} - {{ formatDate $todayWeather.StartTime $todayWeather.Timezone }}`
-
-<img src="{{ $todayWeather.Icon}}"/>
-
 {{ $todayWeather.Condition }}
 
 {{- end }}
