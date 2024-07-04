@@ -1,7 +1,10 @@
 name: "Cronjob"
-on: lol
-schedule:
-- cron: '15 * * * *'
+on:
+    schedule:
+    - cron: '15 * * * *'
+    - cron: '30 * * * *'
+    - cron: '45 * * * *'
+    - cron: '0 * * * *'
 
 jobs:
     update-weather:
