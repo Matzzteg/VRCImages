@@ -8,8 +8,4 @@
 
 {{ $todayWeather.Condition }}
 
-</div>
-
-{{ template "daily-table" .Weathers }}
-
 {{- end }}
