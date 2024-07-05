@@ -7,14 +7,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - name: Generate README
+            - name: Generate BerlinWeather
               uses: huantt/weather-forecast@v1.0.6
               with:
                 city: Eberswalde
                 days: 1
                 weather-api-key: ${{ secrets.WEATHER_API_KEY }}
-                template-file: 'README.md.template'
-                out-file: 'README.md'
+                template-file: 'BerlinWeather.md.template'
+                out-file: 'BerlinWeather.md'
             - name: Commit
               run: |
                 if git diff --exit-code; then
