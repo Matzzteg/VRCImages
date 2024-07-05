@@ -1,3 +1,4 @@
+{{ with $todayWeather := index .Weathers 1 }}
 {{ $todayWeather.Condition }}
-{{ with $todayWeather := index .Weathers 0 }}
+
 {{- end }}
