@@ -1,2 +1,2 @@
 
-Light sleet
+Moderate or heavy snow showers
