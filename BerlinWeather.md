@@ -1,2 +1,2 @@
 
-Moderate snow
+Moderate or heavy snow showers
