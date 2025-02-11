@@ -1,2 +1,2 @@
 
-Sunny
+Moderate or heavy snow showers
