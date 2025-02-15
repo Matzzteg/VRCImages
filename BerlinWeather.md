@@ -1,2 +1,2 @@
 
-Light freezing rain
+Light snow showers
