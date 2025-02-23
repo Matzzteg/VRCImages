@@ -1,2 +1,2 @@
 
-Mist
+Partly Cloudy 
