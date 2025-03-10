@@ -1,2 +1,2 @@
 
-Sunny
+Partly Cloudy 
