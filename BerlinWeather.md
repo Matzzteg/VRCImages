@@ -1,2 +1,2 @@
 
-Heavy rain
+Moderate rain
