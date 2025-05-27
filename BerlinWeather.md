@@ -1,2 +1,2 @@
 
-Partly Cloudy 
+Moderate rain
