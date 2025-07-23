@@ -1,2 +1,2 @@
 
-Heavy rain
+Patchy rain nearby
