@@ -1,2 +1,2 @@
 
-Blizzard
+Moderate or heavy snow showers
