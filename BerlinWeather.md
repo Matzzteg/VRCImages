@@ -1,2 +1,2 @@
 
-Moderate snow
+Partly Cloudy 
