@@ -1,2 +1,2 @@
 
-Cloudy 
+Heavy snow
