@@ -1,2 +1,2 @@
 
-Heavy snow
+Blizzard
