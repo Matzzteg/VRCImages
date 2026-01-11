@@ -1,2 +1,2 @@
 
-Sunny
+Patchy moderate snow
