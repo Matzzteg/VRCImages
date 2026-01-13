@@ -1,2 +1,2 @@
 
-Fog
+Patchy rain nearby
