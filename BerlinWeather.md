@@ -1,2 +1,2 @@
 
-Fog
+Partly Cloudy 
