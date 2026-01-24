@@ -1,2 +1,2 @@
 
-Overcast 
+Moderate snow
