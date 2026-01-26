@@ -1,2 +1,2 @@
 
-Patchy rain nearby
+Moderate or heavy snow showers
