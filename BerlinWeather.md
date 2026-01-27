@@ -1,2 +1,2 @@
 
-Freezing fog
+Light freezing rain
