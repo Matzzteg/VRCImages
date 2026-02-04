@@ -1,2 +1,2 @@
 
-Overcast 
+Moderate or heavy snow showers
