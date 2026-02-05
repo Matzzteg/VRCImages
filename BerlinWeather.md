@@ -1,2 +1,2 @@
 
-Freezing fog
+Moderate or heavy snow showers
