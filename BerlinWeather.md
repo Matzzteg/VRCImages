@@ -1,2 +1,2 @@
 
-Mist
+Patchy rain nearby
