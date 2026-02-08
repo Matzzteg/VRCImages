@@ -1,2 +1,2 @@
 
-Light snow
+Patchy moderate snow
