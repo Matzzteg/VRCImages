@@ -1,2 +1,2 @@
 
-Patchy moderate snow
+Light freezing rain
