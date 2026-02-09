@@ -1,2 +1,2 @@
 
-Light freezing rain
+Patchy rain nearby
