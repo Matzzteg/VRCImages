@@ -1,2 +1,2 @@
 
-Light snow showers
+Partly Cloudy 
