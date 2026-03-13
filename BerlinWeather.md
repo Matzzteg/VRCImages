@@ -1,2 +1,2 @@
 
-Cloudy 
+Partly Cloudy 
