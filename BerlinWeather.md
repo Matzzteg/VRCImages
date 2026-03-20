@@ -1,2 +1,2 @@
 
-Patchy rain nearby
+Partly Cloudy 
