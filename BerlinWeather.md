@@ -1,2 +1,2 @@
 
-Moderate rain
+Patchy rain nearby
