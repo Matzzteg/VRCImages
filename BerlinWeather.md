@@ -1,2 +1,2 @@
 
-Light rain shower
+Sunny
