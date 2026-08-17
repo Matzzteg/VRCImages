@@ -1,2 +1,2 @@
 
-Blowing snow
+Blizzard
