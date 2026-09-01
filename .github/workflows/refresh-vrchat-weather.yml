@@ -1,0 +1,54 @@
+name: Refresh VRChat weather from Open-Meteo
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Berlin weather code
+        id: weather
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(curl --fail --silent --show-error --retry 2 --max-time 20 \
+            'https://api.open-meteo.com/v1/forecast?latitude=52.5200&longitude=13.4050&current=weather_code&timezone=UTC')"
+          code="$(printf '%s' "$response" | jq -er '.current.weather_code')"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+
+      - name: Convert WMO weather code to VRChat scenario
+        id: scenario
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "${{ steps.weather.outputs.code }}" in
+            0) scenario="clear" ;;
+            1|2) scenario="cloudy" ;;
+            3|45|48) scenario="overcast" ;;
+            51|53|55|56|57|61|63|65|66|67|71|73|75|77|80|81|82|85|86) scenario="rain" ;;
+            95|96|99) scenario="storm" ;;
+            *) scenario="overcast" ;;
+          esac
+          printf '# Generated from Open-Meteo WMO weather code: %s\nscenario=%s\n' "${{ steps.weather.outputs.code }}" "$scenario" > weather/current.txt
+          echo "name=$scenario" >> "$GITHUB_OUTPUT"
+
+      - name: Commit when the scenario changed
+        shell: bash
+        run: |
+          if git diff --quiet -- weather/current.txt; then
+            echo "Scenario is unchanged: ${{ steps.scenario.outputs.name }}"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add weather/current.txt
+          git commit -m "weather: refresh VRChat scenario to ${{ steps.scenario.outputs.name }}"
+          git push
