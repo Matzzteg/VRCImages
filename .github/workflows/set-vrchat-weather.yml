@@ -1,0 +1,41 @@
+name: Set VRChat weather manually
+
+on:
+  workflow_dispatch:
+    inputs:
+      scenario:
+        description: Weather scenario to publish until the next automatic update
+        required: true
+        type: choice
+        default: clear
+        options:
+          - clear
+          - cloudy
+          - overcast
+          - rain
+          - storm
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write weather feed
+        run: |
+          printf '# Set manually by GitHub Actions\\nscenario=%s\\n' "${{ inputs.scenario }}" > weather/current.txt
+
+      - name: Commit when changed
+        run: |
+          if git diff --quiet -- weather/current.txt; then
+            echo "Weather is already set to ${{ inputs.scenario }}."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add weather/current.txt
+          git commit -m "weather: set scenario to ${{ inputs.scenario }}"
+          git push
