@@ -1,0 +1,29 @@
+name: Validate VRChat weather feed
+
+on:
+  push:
+    paths:
+      - weather/current.txt
+      - .github/workflows/validate-vrchat-weather.yml
+  pull_request:
+    paths:
+      - weather/current.txt
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate scenario
+        shell: bash
+        run: |
+          set -euo pipefail
+          scenario="$(sed -e 's/\\r$//' weather/current.txt | sed -n -E 's/^[[:space:]]*scenario[[:space:]]*=[[:space:]]*([a-z]+)[[:space:]]*$/\\1/p' | head -n 1)"
+          case "$scenario" in
+            clear|cloudy|overcast|rain|storm) echo "Valid weather scenario: $scenario" ;;
+            *) echo "Invalid scenario. Use clear, cloudy, overcast, rain, or storm."; exit 1 ;;
+          esac
