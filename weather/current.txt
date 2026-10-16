@@ -1,2 +1,2 @@
-# Generated from Open-Meteo WMO weather code: 3
+# Generated from Open-Meteo WMO weather code: 45
 scenario=overcast
