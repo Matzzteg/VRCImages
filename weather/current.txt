@@ -1,2 +1,2 @@
-# Generated from Open-Meteo WMO weather code: 1
-scenario=cloudy
+# Generated from Open-Meteo WMO weather code: 3
+scenario=overcast
