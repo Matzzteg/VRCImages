@@ -1,2 +1,2 @@
 
-Light rain
+Patchy rain nearby
