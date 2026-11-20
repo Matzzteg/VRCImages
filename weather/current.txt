@@ -1,2 +1,2 @@
-# Generated from Open-Meteo WMO weather code: 61
-scenario=rain
+# Generated from Open-Meteo WMO weather code: 3
+scenario=overcast
